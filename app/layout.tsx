@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     },
     creator: "David Lee",
     category: "Education",
+    metadataBase: new URL("http://localhost:3000"),
     keywords: [
         "cryptography",
         "cipher",
