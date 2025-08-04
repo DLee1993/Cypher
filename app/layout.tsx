@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/ui/Header";
 
 export const metadata: Metadata = {
     applicationName: "Cypher",
@@ -65,7 +66,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className="antialiased">
-                <header>header</header>
+                <Header />
                 <main>{children}</main>
                 <footer>footer</footer>
             </body>
