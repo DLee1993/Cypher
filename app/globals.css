@@ -1,29 +1,87 @@
 @import "tailwindcss";
 
+/* Adding colors to root allows for all colors to be used in radix ui primitives */
+
 :root {
-    --background: #111;
-    --foreground: #edeef0;
+    /* background */
+    --blue-1: oklch(17.8% 0.0247 266.8);
+    --blue-2: oklch(20.7% 0.0302 266.8);
+    --gray-1: oklch(17.8% 0.0042 277.7);
+    --gray-2: oklch(21.5% 0.004 277.7);
+
+    /* interactive components */
+    --blue-3: oklch(27.1% 0.0694 266.8);
+    --blue-4: oklch(31.8% 0.0933 266.8);
+    --blue-5: oklch(36.1% 0.1046 266.8);
+    --gray-3: oklch(25.5% 0.0055 277.7);
+    --gray-4: oklch(28.4% 0.0075 277.7);
+    --gray-5: oklch(31.4% 0.0089 277.7);
+
+    /* borders and seperators */
+    --blue-6: oklch(40.4% 0.1106 266.8);
+    --blue-7: oklch(45% 0.1203 266.8);
+    --blue-8: oklch(50.3% 0.1373 266.8);
+    --gray-6: oklch(35% 0.01 277.7);
+    --gray-7: oklch(40.2% 0.0121 277.7);
+    --gray-8: oklch(49.2% 0.0157 277.7);
+
+    /* solid colors */
+    --blue-9: oklch(54.3% 0.1913 266.8);
+    --blue-10: oklch(49.7% 0.1373 266.8);
+    --gray-9: oklch(54% 0.0167 277.7);
+    --gray-10: oklch(58.6% 0.0165 277.7);
+
+    /* text colors */
+    --blue-11: oklch(77.7% 0.1234 266.8);
+    --blue-12: oklch(91.1% 0.0428 266.8);
+    --gray-11: oklch(77% 0.0138 277.7);
+    --gray-12: oklch(94.9% 0.0026 277.7);
+}
+
+/* Adding colors to theme allows for all colors to be used in application */
+
+@theme {
+    /* background */
+    --color-blue-1: oklch(17.8% 0.0247 266.8);
+    --color-blue-2: oklch(20.7% 0.0302 266.8);
+    --color-gray-1: oklch(17.8% 0.0042 277.7);
+    --color-gray-2: oklch(21.5% 0.004 277.7);
+
+    /* interactive components */
+    --color-blue-3: oklch(27.1% 0.0694 266.8);
+    --color-blue-4: oklch(31.8% 0.0933 266.8);
+    --color-blue-5: oklch(36.1% 0.1046 266.8);
+    --color-gray-3: oklch(25.5% 0.0055 277.7);
+    --color-gray-4: oklch(28.4% 0.0075 277.7);
+    --color-gray-5: oklch(31.4% 0.0089 277.7);
+
+    /* borders and seperators */
+    --color-blue-6: oklch(40.4% 0.1106 266.8);
+    --color-blue-7: oklch(45% 0.1203 266.8);
+    --color-blue-8: oklch(50.3% 0.1373 266.8);
+    --color-gray-6: oklch(35% 0.01 277.7);
+    --color-gray-7: oklch(40.2% 0.0121 277.7);
+    --color-gray-8: oklch(49.2% 0.0157 277.7);
+
+    /* solid colors */
+    --color-blue-9: oklch(54.3% 0.1913 266.8);
+    --color-blue-10: oklch(49.7% 0.1373 266.8);
+    --color-gray-9: oklch(54% 0.0167 277.7);
+    --color-gray-10: oklch(58.6% 0.0165 277.7);
+
+    /* text colors */
+    --color-blue-11: oklch(77.7% 0.1234 266.8);
+    --color-blue-12: oklch(91.1% 0.0428 266.8);
+    --color-gray-11: oklch(77% 0.0138 277.7);
+    --color-gray-12: oklch(94.9% 0.0026 277.7);
 }
 
 @layer base {
     body {
-        background-color: var(--background);
-        color: var(--foreground);
-    }
-}
-
-@layer components {
-    .SeparatorRoot {
-        background-color: var(--foreground);
-        opacity: 15%;
-    }
-    .SeparatorRoot[data-orientation="horizontal"] {
-        height: 1px;
-        width: 100%;
-    }
-    .SeparatorRoot[data-orientation="vertical"] {
-        height: 100%;
-        min-height: 25px;
-        width: 1px;
+        background: linear-gradient(to bottom, var(--blue-2), transparent);
+        background-color: var(--blue-1);
+        background-repeat: no-repeat;
+        color: var(--gray-12);
+        min-height: 100vh;
     }
 }
