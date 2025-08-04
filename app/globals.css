@@ -11,3 +11,19 @@
         color: var(--foreground);
     }
 }
+
+@layer components {
+    .SeparatorRoot {
+        background-color: var(--foreground);
+        opacity: 50%;
+    }
+    .SeparatorRoot[data-orientation="horizontal"] {
+        height: 1px;
+        width: 100%;
+    }
+    .SeparatorRoot[data-orientation="vertical"] {
+        height: 100%;
+        min-height: 25px;
+        width: 1px;
+    }
+}
