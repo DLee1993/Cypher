@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     creator: "David Lee",
     category: "Education",
     metadataBase: new URL("http://localhost:3000"),
+    icons: {
+        icon: "/assets/logo.svg"
+    },
     keywords: [
         "cryptography",
         "cipher",
