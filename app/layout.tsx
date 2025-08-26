@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import AppSidebar from "@/components/Sidebar";
 import "./globals.css";
+
+const outfit = Outfit({
+    subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
     title: "CypherCraft — Explore the Art of Secure Communication",
@@ -63,8 +70,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className="antialiased">
-                <main>{children}</main>
+            <body className={`${outfit.className} antialiased bg-background text-foreground`}>
+                <SidebarProvider>
+                    {/* <AppSidebar /> */}
+                    <main>{children}</main>
+                </SidebarProvider>
             </body>
         </html>
     );
