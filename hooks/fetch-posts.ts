@@ -1,6 +1,6 @@
 import { ParamValue } from "next/dist/server/request/params";
 
-const posts = ["test", "test1"];
+const posts = ["test", "test1", "caesar"];
 
 export const FetchPostBySlug = (slug: ParamValue) => {
     const post = posts.find((post) => post === slug);
