@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import "./globals.css";
+import AppSidebar from "@/components/App_Sidebar";
 
 const outfit = Outfit({
     subsets: ["latin"],
@@ -70,8 +71,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${outfit.className} antialiased bg-background text-foreground`}>
-                <SidebarProvider defaultOpen={false}>
-                    <main>{children}</main>
+                <SidebarProvider>
+                    <AppSidebar />
+                    <main className="w-screen">{children}</main>
                 </SidebarProvider>
             </body>
         </html>
