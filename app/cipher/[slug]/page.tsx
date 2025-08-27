@@ -1,6 +1,6 @@
 "use client";
 
-import { FetchPostBySlug } from "@/hooks/fetch-posts";
+import { FetchPostBySlug } from "@/hooks/fetch-ciphers";
 import { notFound, useParams } from "next/navigation";
 
 export default function CipherEducationPage() {
